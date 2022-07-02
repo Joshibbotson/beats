@@ -1,34 +1,39 @@
 function home() {
-    content = document.getElementById('content')
-    nav = document.createElement('nav')
-    header = document.createElement('header')
-    main = document.createElement('main')
-    div = document.createElement('div')
-    li = document.createElement('li')
-    ul = document.createElement('ul')
-    h2 = document.createElement('h2')
-    liHTML = document.getElementsByTagName('li')
-
-    function newli() {
-        return document.createElement('li')
-    
-    }
+    const content = document.getElementById('content')
+    const nav = document.createElement('nav')
+    const header = document.createElement('header')
+    const main = document.createElement('main')
+    const div = document.createElement('div')
+    const li = document.createElement('li')
+    const ul = document.createElement('ul')
+    const h2 = document.createElement('h2')
+    const liHTML = document.getElementsByTagName('li')
 
     const h2Text = document.createTextNode('Myhzy Beats')
     h2.classList.add('nav-title')
     h2.appendChild(h2Text)
 
-    homeDomElement.ul.classList.add('nav-links')
+    ul.classList.add('nav-links')
 
-    homeText = document.createTextNode('Home')
-    beatsText = document.createTextNode('Beats')
-    contactText = document.createTextNode('Contact')
+    let homeLi = document.createElement('li')
+    let beatsLi = document.createElement('li')
+    let contactLi = document.createElement('li')
+
+    const homeText = document.createTextNode('Home')
+    const beatsText = document.createTextNode('Beats')
+    const contactText = document.createTextNode('Contact')
 
     content.appendChild(nav)
     nav.appendChild(h2)
     nav.appendChild(ul)
-    ul.appendChild(newli().appendChild(homeText))
-    ul.appendChild(newli().appendChild(beatsText))
+
+    homeLi.appendChild(homeText)
+    beatsLi.appendChild(beatsText)
+    contactLi.appendChild(contactText)
+
+    ul.appendChild(homeLi)
+    ul.appendChild(beatsLi)
+    ul.appendChild(contactLi)
     
 
 
