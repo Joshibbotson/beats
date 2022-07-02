@@ -1,6 +1,5 @@
 import './style.css'
+import home from './home.js'
 
-import {camelCase} from 'lodash'
 
-
-console.log(camelCase("hello world"))
+home()
