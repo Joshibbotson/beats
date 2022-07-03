@@ -30,16 +30,6 @@ function home() {
     //main..
     content.appendChild(main)
 
-    // function itemCreation (amount, cssClass) {
-    //     let arr = []
-    //     for (let i = 0; i <= amount; i++) {
-    //         const div = document.createElement('div')
-    //         div.classList.add(cssClass)
-    //         main.appendChild(div)
-    //     }
-    //     console.log(arr)
-    // }
-    // itemCreation(3, "item")
 
     const iframe = document.createElement('iframe');
     iframe.src = "https://www.youtube.com/embed/9HlA_0L8uLA"
