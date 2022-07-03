@@ -1,38 +1,8 @@
 function home() {
     const content = document.getElementById('content')
-    const nav = document.createElement('nav')
     const header = document.createElement('header')
     const main = document.createElement('main')
-    const ul = document.createElement('ul')
-    const h2 = document.createElement('h2')
-
-    //nav//
-    const h2Text = document.createTextNode('Myhzy Beats')
-    h2.classList.add('nav-title')
-    h2.appendChild(h2Text)
-
-    ul.classList.add('nav-links')
-
-    let homeLi = document.createElement('li')
-    let beatsLi = document.createElement('li')
-    let contactLi = document.createElement('li')
-
-    const homeText = document.createTextNode('Home')
-    const beatsText = document.createTextNode('Beats')
-    const contactText = document.createTextNode('Contact')
-
-    content.appendChild(nav)
-    nav.appendChild(h2)
-    nav.appendChild(ul)
-
-    homeLi.appendChild(homeText)
-    beatsLi.appendChild(beatsText)
-    contactLi.appendChild(contactText)
-
-    ul.appendChild(homeLi)
-    ul.appendChild(beatsLi)
-    ul.appendChild(contactLi)
-// nav ends//
+ 
 //header//
     content.appendChild(header)
 
@@ -60,17 +30,23 @@ function home() {
     //main..
     content.appendChild(main)
 
-    function itemCreation (amount, cssClass) {
-        let arr = []
-        for (let i = 0; i <= amount; i++) {
-            const div = document.createElement('div')
-            div.classList.add(cssClass)
-            arr.push(div)
-            main.appendChild(arr[i])
-        }
-        console.log(arr)
-    }
-    itemCreation(3, "item")
+    // function itemCreation (amount, cssClass) {
+    //     let arr = []
+    //     for (let i = 0; i <= amount; i++) {
+    //         const div = document.createElement('div')
+    //         div.classList.add(cssClass)
+    //         main.appendChild(div)
+    //     }
+    //     console.log(arr)
+    // }
+    // itemCreation(3, "item")
+
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/9HlA_0L8uLA"
+    iframe.classList.add("iframe-home")
+    iframe.title = "Drake Fans Arn't Happy About This..."
+    main.appendChild(iframe)
+
 
 
 }
